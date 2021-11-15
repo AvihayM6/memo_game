@@ -1,3 +1,12 @@
-.button{
-    border-radius: 10px;
+.outer{
+    /* text-align: center; */
+    display: flex;
+    justify-content: space-evenly;
 }
+
+.button{
+    color: black !important;
+    font-size: 19px !important;
+    margin: 80px !important;
+}
+

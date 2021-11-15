@@ -1,6 +1,6 @@
 import '../Styles/App.css';
 import Footer from './Footer';
-import Header from './Header';
+// import Header from './Header';
 import TreeOnTreeGame from './TreeOnTreeGame';
 import FourOnFourGame from './FourOnFourGame';
 import FiveOnFiveGame from './FiveOnFiveGame';
@@ -12,7 +12,6 @@ function App() {
     <div className="App"> 
       <h1>Memory game</h1>
       <Router>
-        <div className="row">
           <Switch>
           <Route exact path="/">
             {/* <Header /> */}
@@ -28,7 +27,6 @@ function App() {
             <FiveOnFiveGame />
           </Route>
           </Switch>
-        </div>
       </Router>
       <Footer />
     </div>
