@@ -1,12 +1,27 @@
+.home{
+    margin: 80px !important;
+}
+
 .outer{
     /* text-align: center; */
     display: flex;
     justify-content: space-evenly;
+    border: 2px solid red;
 }
 
 .button{
     color: black !important;
     font-size: 19px !important;
-    margin: 80px !important;
+    margin: 20px !important;
 }
 
+/* .diff-container{
+    position: relative !important; 
+    border: 2px solid blue;
+} */
+
+.diff{
+    display: table;
+    border: 2px solid black;
+
+}
