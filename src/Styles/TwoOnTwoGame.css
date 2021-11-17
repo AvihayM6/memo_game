@@ -16,6 +16,8 @@
     background: #5c006e;
     border: 2px solid 5c006e;
     color: #fff;
+    transition: all ease-in 0.3s;
+
   }
   .card-grid {
     margin-top: 40px;
