@@ -16,6 +16,7 @@ const cardImages = [{ "src": "/img/helmet-1.png", matched: false },
     const [turns, setTurns] = useState(0);
     const [choiceOne, setChoiceOne] = useState(null);
     const [choiceTwo, setChoiceTwo] = useState(null);
+    // const [disabled, setDisabled] = useState(false);
 
     //shuffled the card array
     const shuffleCards = () => {
@@ -34,6 +35,7 @@ const cardImages = [{ "src": "/img/helmet-1.png", matched: false },
     }
 
     useEffect(() => {
+      // setDisabled(true);
       if(choiceOne && choiceTwo){
         if(choiceOne.src === choiceTwo.src){
           setCards( (prevCards) => {
@@ -65,15 +67,18 @@ const cardImages = [{ "src": "/img/helmet-1.png", matched: false },
     return ( 
         <div>
             <button onClick={shuffleCards}> click here</button>
-            <div className="card-grid">
-              {cards.map((card) => (
-                <SingleCard 
-                           key={card.id} 
-                           card={card}
-                           handleChoice={handleChoice}
-                           flipped={card === choiceOne || card === choiceTwo || card.matched}
-                />
-              ))}
+            <div className="board">
+                <div className="card-grid">
+                  {cards.map((card) => (
+                    <SingleCard 
+                              key={card.id} 
+                              card={card}
+                              handleChoice={handleChoice}
+                              flipped={card === choiceOne || card === choiceTwo || card.matched}
+                              //  disabled={}
+                    />
+                  ))}
+                </div>
             </div>
         </div>
      );
