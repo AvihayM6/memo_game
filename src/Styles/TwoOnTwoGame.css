@@ -33,3 +33,13 @@
     align-items: center;
     margin: 20px;
   }
+
+  .turns{
+    font-weight: bold;
+  }
+
+  .buttonsTeam{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }

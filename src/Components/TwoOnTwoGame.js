@@ -16,14 +16,15 @@ const cardImages = [{ "src": "/img/helmet-1.png", matched: false },
     const [turns, setTurns] = useState(0);
     const [choiceOne, setChoiceOne] = useState(null);
     const [choiceTwo, setChoiceTwo] = useState(null);
-    // const [disabled, setDisabled] = useState(false);
+    const [disabled, setDisabled] = useState(false);
 
     //shuffled the card array
     const shuffleCards = () => {
         const tempShuffledCards = [...cardImages, ...cardImages]
           .sort(() => Math.random() - 0.5)
           .map(card => ({ ...card, id: Math.random() }))
-          
+        setChoiceOne(null);  
+        setChoiceTwo(null);  
         setCards(tempShuffledCards)
         setTurns(0)
       }
@@ -35,8 +36,8 @@ const cardImages = [{ "src": "/img/helmet-1.png", matched: false },
     }
 
     useEffect(() => {
-      // setDisabled(true);
       if(choiceOne && choiceTwo){
+        setDisabled(true);
         if(choiceOne.src === choiceTwo.src){
           setCards( (prevCards) => {
             return prevCards.map((card) => {
@@ -56,17 +57,22 @@ const cardImages = [{ "src": "/img/helmet-1.png", matched: false },
       }
     }, [choiceOne, choiceTwo]);
 
-    console.log(cards)
+
+    useEffect(() => {
+      shuffleCards();
+    }, [])
+
 
     const resetTurns = () => {
       setChoiceOne(null);
       setChoiceTwo(null);
       setTurns((prev) => prev+1)
+      setDisabled(false);
     }
 
     return ( 
         <div>
-            <button onClick={shuffleCards}> click here</button>
+            <button onClick={shuffleCards}> Reset</button>
             <div className="board">
                 <div className="card-grid">
                   {cards.map((card) => (
@@ -75,11 +81,12 @@ const cardImages = [{ "src": "/img/helmet-1.png", matched: false },
                               card={card}
                               handleChoice={handleChoice}
                               flipped={card === choiceOne || card === choiceTwo || card.matched}
-                              //  disabled={}
+                               disabled={disabled}
                     />
                   ))}
                 </div>
             </div>
+            <p className="turns">Turns: {turns}</p>
         </div>
      );
 }
