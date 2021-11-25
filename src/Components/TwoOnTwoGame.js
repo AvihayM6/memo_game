@@ -72,7 +72,7 @@ const cardImages = [{ "src": "/img/helmet-1.png", matched: false },
 
     return ( 
         <div>
-            <button onClick={shuffleCards}> Reset</button>
+            <button onClick={shuffleCards}> New game / Reset</button>
             <div className="board">
                 <div className="card-grid">
                   {cards.map((card) => (

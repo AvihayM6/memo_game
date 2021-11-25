@@ -1,0 +1,45 @@
+.App {
+    max-width: 860px;
+    margin: 40px auto;
+  }
+  button {
+    background: none;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  button:hover {
+    background: #5c006e;
+    border: 2px solid 5c006e;
+    color: #fff;
+    transition: all ease-in 0.3s;
+
+  }
+  .card-grid {
+    /* margin-top: 40px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    max-width: 400px;
+  }
+
+  .board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .turns{
+    font-weight: bold;
+  }
+
+  .buttonsTeam{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }

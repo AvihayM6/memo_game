@@ -1,6 +1,6 @@
 import { useState, useEffect} from 'react';
 import SingleCard from './SingleCard';
-import '../Styles/TwoOnTwoGame.css';
+import '../Styles/FourOnFourGame.css';
 
 
 
