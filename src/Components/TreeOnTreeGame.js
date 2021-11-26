@@ -1,6 +1,8 @@
 import { useState, useEffect} from 'react';
 import SingleCard from './SingleCard';
 import '../Styles/TreeOnTreeGame.css';
+import {Link} from 'react-router-dom';
+
 
 
 
@@ -73,9 +75,13 @@ const cardImages = [{ "src": "/img/helmet-1.png", matched: false },
 
     return ( 
         <div>
-            <button onClick={shuffleCards}> New game / Reset</button>
+            <div className="buttons-group">
+              <button className="button1" onClick={shuffleCards}> New game / Reset </button>
+              <Link to="/" className="button1"  role="button"> Home </Link>
+            </div>
+            <p className="turns">Turns: {turns}</p>
             <div className="board">
-                <div className="card-grid">
+                <div className="card-grid3">
                   {cards.map((card) => (
                     <SingleCard 
                               key={card.id} 
@@ -87,7 +93,6 @@ const cardImages = [{ "src": "/img/helmet-1.png", matched: false },
                   ))}
                 </div>
             </div>
-            <p className="turns">Turns: {turns}</p>
         </div>
      );
 }

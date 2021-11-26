@@ -1,45 +1,52 @@
 .App {
-    max-width: 860px;
-    margin: 40px auto;
-  }
-  button {
-    background: none;
-    border: 2px solid rgb(0, 0, 0);
-    padding: 6px 12px;
-    border-radius: 4px;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 1em;
-  }
-  button:hover {
-    background: #5c006e;
-    border: 2px solid 5c006e;
-    color: #fff;
-    transition: all ease-in 0.3s;
+  max-width: 860px;
+  margin: 40px auto;
+}
 
-  }
-  .card-grid {
-    /* margin-top: 40px; */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    max-width: 400px;
-  }
+.button1{
+  background: none;
+  border: 2px solid white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: white !important;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+}
 
-  .board{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-  }
+.button1:hover {
+  background: #5c006e;
+  border: 2px solid #5c006e;
+  color: #fff !important;
+  transition: all ease-in 0.1s;
+}
 
-  .turns{
-    font-weight: bold;
-  }
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  max-width: 300px;
+}
 
-  .buttonsTeam{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
+.board{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.turns{
+  font-weight: bold;
+  color: #fff;
+}
+
+.buttonsTeam{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.buttons-group{
+  display: flex;
+  justify-content: space-around;
+}

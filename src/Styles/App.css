@@ -7,9 +7,6 @@
 
 .App h1{
   margin: 50px;
-
-}
-
-.row{
-  margin: 130px;
+  color: white;
+  font-size: 80px;
 }
